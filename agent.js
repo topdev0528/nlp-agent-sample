@@ -67,7 +67,7 @@ app.post('/receiveMessage', (req, res) => {
     });
   }
 
-  const acceptPhrases = [`${curretName} I accept`.toLowerCase(), `${currentName} I agree`.toLowerCase()].includes(req.body.text.toLowerCase());
+  const acceptPhrases = [`${currentName} I accept`.toLowerCase(), `${currentName} I agree`.toLowerCase()].includes(req.body.text.toLowerCase());
   if (currentBid && acceptPhrases) {
     const payload = {
       text: "You got it! Enjoy your purchase!",
