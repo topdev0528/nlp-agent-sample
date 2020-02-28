@@ -1,4 +1,4 @@
-# anac-agent-kleene
+# agent-kleene
 
 A dumb negotation agent based on regex.
 

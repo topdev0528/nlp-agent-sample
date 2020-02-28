@@ -79,7 +79,7 @@ app.post('/receiveMessage', (req, res) => {
     };
     payload.bid.type = 'Accept';
 
-    postToService('anac-environment-orchestrator', '/relayMessage', payload);
+    postToService('environment-orchestrator', '/relayMessage', payload);
 
     return res.json({status: 'acknowledged'});
   }
@@ -143,7 +143,7 @@ app.post('/receiveMessage', (req, res) => {
   };
   payload.bid.type = 'SellOffer';
 
-  postToService('anac-environment-orchestrator', '/relayMessage', payload);
+  postToService('environment-orchestrator', '/relayMessage', payload);
 
   return res.json({status: 'acknowledged'});
 });

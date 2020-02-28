@@ -1,5 +1,5 @@
 {
-  "name": "anac-agent-kleene",
+  "name": "agent-kleene",
   "version": "0.0.1",
   "description": "A dumb negotation agent based on regex",
   "main": "agent.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@us-south.git.cloud.ibm.com:anac-humaine/anac-agent-kleene.git"
+    "url": "git@github.com:humane-anac/agent-kleene.git"
   },
   "author": "Matthew Peveler <pevelm@rpi.edu>",
   "license": "MIT",
