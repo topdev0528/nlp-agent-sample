@@ -1,20 +1,16 @@
-const path = require('path');
 const express = require('express');
 const {setLogLevel, logExpression} = require('@cisl/zepto-logger');
+const argv = require('minimist')(process.argv.slice(2));
+
 const {postToService} = require('./utils');
 const packageJson = require('./package.json');
 
-let myPort = 14008;
+let myPort = argv.port || appSettings.defaultPort || 14007;
 let logLevel = 1;
-process.argv.forEach((val, index, array) => {
-  if (val === '-port') {
-    myPort = parseInt(array[index + 1]);
-  }
-  if (val === '-level') {
-    logLevel = array[index + 1];
-    logExpression('Setting log level to ' + logLevel, 1);
-  }
-});
+if (argv.level) {
+  logLevel = argv.level;
+  logExpression(`Setting log level to ${logLevel}`, 1);
+}
 setLogLevel(logLevel);
 
 const ingredient_list = [
