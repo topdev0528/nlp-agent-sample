@@ -2,6 +2,7 @@ const express = require('express');
 const {setLogLevel, logExpression} = require('@cisl/zepto-logger');
 const argv = require('minimist')(process.argv.slice(2));
 
+const appSettings = require('./appSettings.json')
 const {postToService} = require('./utils');
 const packageJson = require('./package.json');
 
